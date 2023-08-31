@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ClientInformationRepository } from '../repositories/clientInformation-repositorie';
 import { Geolocation } from '../entities/geolocation';
 import { ClientInformation } from '../entities/user-info';
+import { ListClientDto } from 'src/infra/http/dtos/list-client';
 
 @Injectable()
 export class ListClientInformation {
@@ -10,7 +11,7 @@ export class ListClientInformation {
     private clientInformationRepository: ClientInformationRepository,
   ) {}
 
-  async execute(): Promise<ClientInformation[]> {
+  async execute(): Promise<ListClientDto[]> {
     return this.clientInformationRepository.listAll();
   }
 }

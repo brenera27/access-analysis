@@ -15,7 +15,6 @@ export class NotificationsController {
   async createClientByGet(@Body() body: any, @Req() request: Request) {
     const clientIP = request.ip;
     const acceptLanguageHeader = request.headers['accept-language'];
-
     const languages = acceptLanguageHeader?.split(',') || '';
     const language = languages[0] ? languages[0].trim() : 'DefaultLanguage';
     const userAgent = useragent.parse(request.headers['user-agent']);

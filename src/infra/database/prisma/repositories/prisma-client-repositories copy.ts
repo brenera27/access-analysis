@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { ClientInformation } from 'src/application/entities/user-info';
 import { ClientInformationRepository } from 'src/application/repositories/clientInformation-repositorie';
 import { PrismaClientInformationMapper } from '../mappers/prisma-client-mappe';
+import { ListClientDto } from 'src/infra/http/dtos/list-client';
 
 @Injectable()
 export class PrismaClientInformationRepository
@@ -10,14 +11,14 @@ export class PrismaClientInformationRepository
 {
   constructor(private prismaService: PrismaService) {}
 
-  async listAll(): Promise<any> {
-    const aux = await this.prismaService.clientInformation.findMany();
-
-    return aux;
+  async listAll(): Promise<ListClientDto[] | null> {
+    const res = await this.prismaService.clientInformation.findMany();
+    console.log(res);
+    return res;
   }
 
   async create(clientInformation: ClientInformation): Promise<void> {
-    await this.prismaService.clientInformation.create({
+    this.prismaService.clientInformation.create({
       data: PrismaClientInformationMapper.toPrisma(clientInformation),
     });
   }

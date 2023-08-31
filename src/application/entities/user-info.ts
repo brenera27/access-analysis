@@ -6,6 +6,7 @@ export interface ClientInformationProps {
   device: string;
   language: string;
   geolocation: Geolocation;
+  updatedAt?: Date;
   createdAt: Date;
 }
 

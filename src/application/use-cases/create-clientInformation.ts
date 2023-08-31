@@ -19,13 +19,9 @@ export class CreateClientInformation {
   async execute(request: CreateClientInformationRequest): Promise<void> {
     const geoPluginURL = `http://www.geoplugin.net/json.gp?ip=191.30.55.68`;
     try {
-      // Faz a solicitação HTTP para o serviço GeoPlugin
       const response = await axios.get(geoPluginURL);
-      // Verifica se a resposta possui os dados desejados
       if (response.status === 200 && response.data) {
         const geoData = response.data;
-
-        // Extrai os dados desejados do JSON de resposta
         const {
           geoplugin_city,
           geoplugin_region,
@@ -56,10 +52,7 @@ export class CreateClientInformation {
           geolocation,
         });
         this.clientInformationRepository.create(userInfo);
-        console.log(userInfo);
-        // Retorna os dados como resposta
       } else {
-        // Se a solicitação não for bem-sucedida, lança uma exceção com uma mensagem de erro
         throw new Error('Falha na solicitação ao GeoPlugin');
       }
     } catch (error) {

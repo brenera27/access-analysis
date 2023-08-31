@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+// Configure a conexão com o banco de dados PostgreSQL
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Use a variável de ambiente para armazenar a URL do banco de dados
+}
+ 
+
+model ClientInformation {
+  id String @id 
+  device String
+  language String
+  city String
+  region String
+  regionCode String
+  regionName String
+  countryCode String
+  countryName String
+  continentCode String
+  continentName String
+  timezone String
+  updatedAt DateTime? @default(now())
+  createdAt DateTime? @default(now())
+}

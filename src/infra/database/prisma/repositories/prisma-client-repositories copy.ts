@@ -10,16 +10,15 @@ export class PrismaClientInformationRepository
 {
   constructor(private prismaService: PrismaService) {}
 
-  async listAll(): Promise<ClientInformation[] | null> {
-    // return this.prismaService.clientInformation.findFirst();
-    throw new Error('Errors');
+  async listAll(): Promise<any> {
+    const aux = await this.prismaService.clientInformation.findMany();
+
+    return aux;
   }
 
   async create(clientInformation: ClientInformation): Promise<void> {
-    console.log('asdasdasd');
-    const teste = await this.prismaService.clientInformation.create({
+    await this.prismaService.clientInformation.create({
       data: PrismaClientInformationMapper.toPrisma(clientInformation),
     });
-    console.log(teste);
   }
 }

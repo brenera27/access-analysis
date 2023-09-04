@@ -144,6 +144,10 @@ const config = {
         "fromEnvVar": null,
         "value": "darwin-arm64",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "linux-arm64-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -160,6 +164,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -168,8 +173,9 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCn0KCi8vIENvbmZpZ3VyZSBhIGNvbmV4w6NvIGNvbSBvIGJhbmNvIGRlIGRhZG9zIFBvc3RncmVTUUwKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9IGVudigiREFUQUJBU0VfVVJMIikgLy8gVXNlIGEgdmFyacOhdmVsIGRlIGFtYmllbnRlIHBhcmEgYXJtYXplbmFyIGEgVVJMIGRvIGJhbmNvIGRlIGRhZG9zCn0KIAoKbW9kZWwgQ2xpZW50SW5mb3JtYXRpb24gewogIGlkIFN0cmluZyBAaWQgCiAgZGV2aWNlIFN0cmluZwogIGxhbmd1YWdlIFN0cmluZwogIGNpdHkgU3RyaW5nCiAgcmVnaW9uIFN0cmluZwogIHJlZ2lvbkNvZGUgU3RyaW5nCiAgcmVnaW9uTmFtZSBTdHJpbmcKICBjb3VudHJ5Q29kZSBTdHJpbmcKICBjb3VudHJ5TmFtZSBTdHJpbmcKICBjb250aW5lbnRDb2RlIFN0cmluZwogIGNvbnRpbmVudE5hbWUgU3RyaW5nCiAgdGltZXpvbmUgU3RyaW5nCiAgdXBkYXRlZEF0IERhdGVUaW1lPyBAZGVmYXVsdChub3coKSkKICBjcmVhdGVkQXQgRGF0ZVRpbWU/IEBkZWZhdWx0KG5vdygpKQp9",
-  "inlineSchemaHash": "1cd3cea82838ee57fc85b9e0db4feb256883694d96a123c9f3a5bf0dc4006b5f"
+  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCiAgYmluYXJ5VGFyZ2V0cyA9IFsibmF0aXZlIiwgImxpbnV4LWFybTY0LW9wZW5zc2wtMy4wLngiXQp9CgoKLy8gQ29uZmlndXJlIGEgY29uZXjDo28gY29tIG8gYmFuY28gZGUgZGFkb3MgUG9zdGdyZVNRTApkYXRhc291cmNlIGRiIHsKICBwcm92aWRlciA9ICJwb3N0Z3Jlc3FsIgogIHVybCAgICAgID0gZW52KCJEQVRBQkFTRV9VUkwiKSAvLyBVc2UgYSB2YXJpw6F2ZWwgZGUgYW1iaWVudGUgcGFyYSBhcm1hemVuYXIgYSBVUkwgZG8gYmFuY28gZGUgZGFkb3MKfQogCgptb2RlbCBDbGllbnRJbmZvcm1hdGlvbiB7CiAgaWQgU3RyaW5nIEBpZCAKICBkZXZpY2UgU3RyaW5nCiAgbGFuZ3VhZ2UgU3RyaW5nCiAgY2l0eSBTdHJpbmcKICByZWdpb24gU3RyaW5nCiAgcmVnaW9uQ29kZSBTdHJpbmcKICByZWdpb25OYW1lIFN0cmluZwogIGNvdW50cnlDb2RlIFN0cmluZwogIGNvdW50cnlOYW1lIFN0cmluZwogIGNvbnRpbmVudENvZGUgU3RyaW5nCiAgY29udGluZW50TmFtZSBTdHJpbmcKICB0aW1lem9uZSBTdHJpbmcKICB1cGRhdGVkQXQgRGF0ZVRpbWU/IEBkZWZhdWx0KG5vdygpKQogIGNyZWF0ZWRBdCBEYXRlVGltZT8gQGRlZmF1bHQobm93KCkpCn0=",
+  "inlineSchemaHash": "aafca3ca0d148aaca49516115edf299485f14083b81814d6d513e410f517f562",
+  "noEngine": false
 }
 config.dirname = '/'
 

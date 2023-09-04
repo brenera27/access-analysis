@@ -1,0 +1,16 @@
+version: '3'
+services:
+  # Serviço para o banco de dados PostgreSQL
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 6vc572UhK37
+      POSTGRES_DB: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./database-events:/var/lib/postgres/data
+volumes:
+  database-events:

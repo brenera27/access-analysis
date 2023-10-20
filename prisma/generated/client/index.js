@@ -134,7 +134,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/brenobarbosa/Documents/Projects/access/prisma/generated/client",
+      "value": "/Users/brenobarbosa/Documents/projects/access-analysis/prisma/generated/client",
       "fromEnvVar": null
     },
     "config": {
@@ -165,7 +165,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -174,8 +174,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCiAgYmluYXJ5VGFyZ2V0cyA9IFsibmF0aXZlIiwgImxpbnV4LWFybTY0LW9wZW5zc2wtMy4wLngiXQp9CgoKLy8gQ29uZmlndXJlIGEgY29uZXjDo28gY29tIG8gYmFuY28gZGUgZGFkb3MgUG9zdGdyZVNRTApkYXRhc291cmNlIGRiIHsKICBwcm92aWRlciA9ICJwb3N0Z3Jlc3FsIgogIHVybCAgICAgID0gZW52KCJEQVRBQkFTRV9VUkwiKSAvLyBVc2UgYSB2YXJpw6F2ZWwgZGUgYW1iaWVudGUgcGFyYSBhcm1hemVuYXIgYSBVUkwgZG8gYmFuY28gZGUgZGFkb3MKfQogCgptb2RlbCBDbGllbnRJbmZvcm1hdGlvbiB7CiAgaWQgU3RyaW5nIEBpZCAKICBkZXZpY2UgU3RyaW5nCiAgbGFuZ3VhZ2UgU3RyaW5nCiAgY2l0eSBTdHJpbmcKICByZWdpb24gU3RyaW5nCiAgcmVnaW9uQ29kZSBTdHJpbmcKICByZWdpb25OYW1lIFN0cmluZwogIGNvdW50cnlDb2RlIFN0cmluZwogIGNvdW50cnlOYW1lIFN0cmluZwogIGNvbnRpbmVudENvZGUgU3RyaW5nCiAgY29udGluZW50TmFtZSBTdHJpbmcKICB0aW1lem9uZSBTdHJpbmcKICB1cGRhdGVkQXQgRGF0ZVRpbWU/IEBkZWZhdWx0KG5vdygpKQogIGNyZWF0ZWRBdCBEYXRlVGltZT8gQGRlZmF1bHQobm93KCkpCn0=",
-  "inlineSchemaHash": "aafca3ca0d148aaca49516115edf299485f14083b81814d6d513e410f517f562",
+  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCiAgYmluYXJ5VGFyZ2V0cyA9IFsibmF0aXZlIiwgImxpbnV4LWFybTY0LW9wZW5zc2wtMy4wLngiXQp9CgovLyBDb25maWd1cmUgYSBjb25leMOjbyBjb20gbyBiYW5jbyBkZSBkYWRvcyBQb3N0Z3JlU1FMCmRhdGFzb3VyY2UgZGIgewogIHByb3ZpZGVyID0gInBvc3RncmVzcWwiCiAgdXJsICAgICAgPSBlbnYoIkRBVEFCQVNFX1VSTCIpIC8vIFVzZSBhIHZhcmnDoXZlbCBkZSBhbWJpZW50ZSBwYXJhIGFybWF6ZW5hciBhIFVSTCBkbyBiYW5jbyBkZSBkYWRvcwp9CiAKCm1vZGVsIENsaWVudEluZm9ybWF0aW9uIHsKICBpZCBTdHJpbmcgQGlkIAogIGRldmljZSBTdHJpbmcKICBsYW5ndWFnZSBTdHJpbmcKICBjaXR5IFN0cmluZwogIHJlZ2lvbiBTdHJpbmcKICByZWdpb25Db2RlIFN0cmluZwogIHJlZ2lvbk5hbWUgU3RyaW5nCiAgY291bnRyeUNvZGUgU3RyaW5nCiAgY291bnRyeU5hbWUgU3RyaW5nCiAgY29udGluZW50Q29kZSBTdHJpbmcKICBjb250aW5lbnROYW1lIFN0cmluZwogIHRpbWV6b25lIFN0cmluZwogIHVwZGF0ZWRBdCBEYXRlVGltZT8gQGRlZmF1bHQobm93KCkpCiAgY3JlYXRlZEF0IERhdGVUaW1lPyBAZGVmYXVsdChub3coKSkKfQ==",
+  "inlineSchemaHash": "e47f92bebb5c35f1813e0782480d92d1fd3b8511e2643dd61b316e3747a42be9",
   "noEngine": false
 }
 

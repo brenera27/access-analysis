@@ -16,7 +16,6 @@ export class PrismaClientInformationRepository
   }
 
   async create(clientInformation: ClientInformation): Promise<void> {
-    console.log(PrismaClientInformationMapper.toPrisma(clientInformation));
     await this.prismaService.clientInformation.create({
       data: PrismaClientInformationMapper.toPrisma(clientInformation),
     });

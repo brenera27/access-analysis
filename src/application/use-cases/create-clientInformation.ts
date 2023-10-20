@@ -17,13 +17,14 @@ export class CreateClientInformation {
   ) {}
 
   async execute(request: CreateClientInformationRequest): Promise<void> {
-    const geoPluginURL = 'http://www.geoplugin.net/json.gp?ip=191.30.55.68';
-
     try {
-      const response = await axios.get(geoPluginURL);
+      const response = await axios.get(process.env.GEOPLUGIN_URL, {
+        params: {
+          id: '191.30.55.68',
+        },
+      });
 
       if (response.status !== 200 || !response.data) {
-        console.error('Falha na solicitação ao GeoPlugin');
         throw new Error('Falha na solicitação ao GeoPlugin');
       }
 
@@ -62,9 +63,7 @@ export class CreateClientInformation {
       const userCreated = await this.clientInformationRepository.create(
         userInfo,
       );
-      console.log(userCreated);
     } catch (error) {
-      console.error('Erro ao criar novo registro:', error);
       throw new Error('Erro ao criar novo registro');
     }
   }

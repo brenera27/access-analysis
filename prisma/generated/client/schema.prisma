@@ -7,7 +7,6 @@ generator client {
   binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
 }
 
-
 // Configure a conexão com o banco de dados PostgreSQL
 datasource db {
   provider = "postgresql"
